@@ -1,6 +1,6 @@
-{ pkgs, fetchFromGitHub, buildPythonPackage, python38Packages }:
+{ pkgs, lib, fetchFromGitHub, python38Packages }:
 
-buildPythonPackage rec {
+python38Packages.buildPythonPackage rec {
   name = "niq";
   version = "2020-07-31";
 

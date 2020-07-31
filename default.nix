@@ -1,5 +1,6 @@
-self: super:
+
+{ pkgs ? import <nixpkgs> { } }:
 
 rec {
-  niq = self.callPackage ./pkgs/tools/niq {};
+  niq = pkgs.callPackage ./pkgs/tools/niq { pkgs = pkgs; };
 }
