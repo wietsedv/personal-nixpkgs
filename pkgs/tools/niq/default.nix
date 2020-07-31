@@ -1,6 +1,8 @@
 { pkgs, lib, fetchFromGitHub, python38Packages }:
 
-python38Packages.buildPythonPackage rec {
+with python38Packages;
+
+buildPythonApplication rec {
   name = "niq";
   version = "2020-07-31";
 
@@ -11,9 +13,9 @@ python38Packages.buildPythonPackage rec {
       sha256 = "1ixnkq4jpw859x3kkphwh53kc89dnhvcqjdh5sp6nv4dj4217m6j";
   };
 
-  buildInputs = [
-    python38Packages.requests
-    python38Packages.brotli
+  propagatedBuildInputs = [
+    requests
+    brotli
   ];
 
   meta = {
