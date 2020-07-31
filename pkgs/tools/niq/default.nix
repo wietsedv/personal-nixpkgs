@@ -1,8 +1,7 @@
-{ pkgs ? import <nixpkgs> {} }:
-with pkgs.python38Packages;
+{ pkgs, fetchFromGitHub, buildPythonPackage, python38Packages }:
 
 buildPythonPackage rec {
-  pname = "niq";
+  name = "niq";
   version = "2020-07-31";
 
   src = fetchFromGitHub {
@@ -13,8 +12,8 @@ buildPythonPackage rec {
   };
 
   buildInputs = [
-    requests
-    brotli
+    python38Packages.requests
+    python38Packages.brotli
   ];
 
   meta = {
