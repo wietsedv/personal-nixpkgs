@@ -4,13 +4,13 @@ with python38Packages;
 
 buildPythonApplication rec {
   name = "niq";
-  version = "2020-07-31";
+  version = "2020-08-01";
 
   src = fetchFromGitHub {
       owner = "wietsedv";
       repo = "nix-niq";
-      rev = "525a86c9b0032d5733e7c232006150ea51ee1378";
-      sha256 = "1ixnkq4jpw859x3kkphwh53kc89dnhvcqjdh5sp6nv4dj4217m6j";
+      rev = "0c22d76d469630cf7aa7e027b1c56ddd9ed683ad";
+      sha256 = "0rw9xzvdmxfmvnsw12hmx3gs3znra2ds61bkf420d3i7dpl6412h";
   };
 
   propagatedBuildInputs = [
